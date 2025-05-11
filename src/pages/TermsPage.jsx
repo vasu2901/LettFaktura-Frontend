@@ -40,16 +40,16 @@ const TermsPage = () => {
                 <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="/">{lang === 'en' ? "Home" : "Hem"}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="#">{lang === 'en' ? "Order" : "Beställ"}</a>
+                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="/">{lang === 'en' ? "Order" : "Beställ"}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="#">{lang === 'en' ? "Our Customers" : "Våra Kunder"}</a>
+                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="/">{lang === 'en' ? "Our Customers" : "Våra Kunder"}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="#">{lang === 'en' ? "About Us" : "Om oss"}</a>
+                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="/">{lang === 'en' ? "About Us" : "Om oss"}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="#">{lang === 'en' ? "Contact Us" : "Kontakta oss"}</a>
+                <a class="nav-link active" style={{ color: 'white' }} aria-current="page" href="/">{lang === 'en' ? "Contact Us" : "Kontakta oss"}</a>
               </li>
               <li class="nav-item dropdown">
                 <p class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ color: 'white' }}>
