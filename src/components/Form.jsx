@@ -51,11 +51,11 @@ const Form = ({ initialData = null, mode = "create", modalId = "productModal" })
         <>
             <button
                 type="button"
-                className="btn btn-outline-success"
+                className={mode !== 'edit' ? "btn btn-outline-success border rounded-pill d-flex align-items-center" : "btn btn-outline-success                    "}
                 data-bs-toggle="modal"
                 data-bs-target={`#${modalId}`}
             >
-                {mode === 'edit' ? 'Edit' : 'New Product'}
+                {mode === 'edit' ? 'Edit' : 'New Product +'}
             </button>
 
             <div

@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa'; // Hamburger icon
+import { useState, useEffect } from 'react';
+import { FaBars, FaPrint, FaFileInvoiceDollar ,FaArrowDown, FaUser, FaCalculator, FaIdCard, FaFileContract } from 'react-icons/fa';
+import { IoToggle   } from "react-icons/io5";
+import { IoIosSettings, IoIosLogOut  } from "react-icons/io";
+import { TfiFiles } from "react-icons/tfi";
+import { MdLocalOffer, MdOutlineInventory  } from "react-icons/md";
+import { TbXboxXFilled } from "react-icons/tb";
+import { BiSolidOffer } from "react-icons/bi";
+import { FaCloudArrowUp } from "react-icons/fa6";
 import '../styles/home.css';
-
 import Form from "../components/Form"
-
+import { CiSearch } from "react-icons/ci";
 const HomePage = () => {
     const [data, setData] = useState([]);
     const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -13,16 +19,6 @@ const HomePage = () => {
     const profilePhoto = "https://img.freepik.com/premium-vector/male-face-avatar-icon-set-flat-design-social-media-profiles_1281173-3806.jpg?semt=ais_hybrid&w=740";
     const countryName = "United States";
     const countryFlag = "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"; // Replace with real flag URL
-
-    const [editdata, seteditData] = useState({
-        article_no: '',
-        product_service: '',
-        in_price: 0,
-        price: 0,
-        unit: '',
-        in_stock: 0,
-        description: '',
-    });
 
     useEffect(() => {
         const fetchData = async () => {
@@ -101,75 +97,98 @@ const HomePage = () => {
                     style={{
                         transition: 'all 0.3s',
                         position: 'absolute',
-                        width: sidebarCollapsed ? '28%' : '250px',
+                        width: sidebarCollapsed ? '28%' : '210px',
                         height: '100vh',
                         marginTop: '-25px',
                         backgroundColor: '#ffffff',
                         boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
                         color: 'black',
-                        padding: sidebarCollapsed ? '0px' : '20px',
+                        padding: sidebarCollapsed ? '0px' : '5px',
                     }}
                 >
+                    <h3 className='mx-3'>Menu</h3>
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <a href="/" className="nav-link" style={{ color: 'black' }}>Invoices</a>
+                            <a href="/" className="nav-link" style={{ color: 'black' }}><FaFileInvoiceDollar style={{marginRight: "10px",color: "#89CFEF" }}/>Invoices</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#order" className="nav-link" style={{ color: 'black' }}>Customers</a>
+                            <a href="#order" className="nav-link" style={{ color: 'black' }}> <FaUser style={{marginRight: "10px",color: "#3DED97" }}/>Customers</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#customers" className="nav-link" style={{ color: 'black' }}>My Business</a>
+                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><IoIosSettings style={{marginRight: "10px",color: "#87CEEB" }}/>My Business</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" style={{ color: 'black' }}>Invoice Journal</a>
+                            <a href="#about" className="nav-link" style={{ color: 'black' }}><FaCalculator  style={{marginRight: "10px",color: "#0080FE" }}/>Invoice Journal</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}>Price List</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><MdLocalOffer  style={{marginRight: "10px",color: "#FDB515"}}/>Price List</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#customers" className="nav-link" style={{ color: 'black' }}>Multiple Invoicing</a>
+                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><TfiFiles
+                             style={{marginRight: "8px",color: "#87CEEB" }}/>Multiple Invoicing</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" style={{ color: 'black' }}>Unpaid Invoices</a>
+                            <a href="#about" className="nav-link" style={{ color: 'black' }}><TbXboxXFilled style={{marginRight: "10px",color: "red" }}/>Unpaid Invoices</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}>Offer</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><BiSolidOffer style={{marginRight: "10px",color: "#FFD700" }}/>Offer</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#customers" className="nav-link" style={{ color: 'black' }}>Inventory Control</a>
+                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><MdOutlineInventory style={{marginRight: "10px",color: "#0080FE" }}/>Inventory Control</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" style={{ color: 'black' }}>Member Invoicing</a>
+                            <a href="#about" className="nav-link" style={{ color: 'black' }}><FaIdCard style={{marginRight: "10px",color: "#0080FE" }}/>Member Invoicing</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}>Import/Export</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><FaCloudArrowUp style={{marginRight: "10px",color: "#4682B4" }}/>Import/Export</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/terms" className="nav-link" style={{ color: 'black' }}>Terms</a>
+                            <a href="/terms" className="nav-link" style={{ color: 'black' }}><FaFileContract  style={{marginRight: "10px",color: "#3DED97" }}/>Terms</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}>Log out</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><IoIosLogOut ser style={{marginRight: "10px",color: "#89CFEF" }}/>Log out</a>
                         </li>
                     </ul>
                 </div>
 
+
                 <div className="flex-grow-1 p-4" style={{ marginLeft: getContentMargin(), transition: 'margin-left 0.3s', }}>
 
-                    <div className="d-flex align-items-center mb-3 gap-2 flex-wrap overflow-y-auto">
-                        <input className="form-control w-25" placeholder="Search Article No.__" />
-                        <input className="form-control w-25" placeholder="Search Product ..." />
-                        <Form />
-                        <button className="btn btn-outline-primary">Print List</button>
-                        <button className="btn btn-outline-secondary">Advanced mode</button>
-                    </div>
+                    <div className="d-flex justify-content-between align-items-start flex-wrap mb-3">
+                        {/* Left: Search Fields */}
+                        <div className="d-flex flex-column gap-2">
+                            <div className="input-group">
+                                <input className="form-control" placeholder="Search Article No..." />
+                                <span className="input-group-text bg-white">
+                                    <CiSearch className='text-primary' />
+                                </span>
+                            </div>
+                            <div className="input-group">
+                                <input className="form-control" placeholder="Search Product ..." />
+                                <span className="input-group-text bg-white"><CiSearch className='text-primary' />
+                                </span>
+                            </div>
+                        </div>
 
+                        {/* Right: Buttons */}
+                        <div className="d-flex gap-2 align-items-center mt-2 mt-md-0">
+                            <Form initialData={{}} mode="add" modalId="addModal" />
+                            <button className="btn btn-outline-primary border rounded-pill d-flex align-items-center">
+                                Print List <FaPrint className='mx-2' />
+                            </button>
+                            <button className="btn btn-outline-primary border rounded-pill d-flex align-items-center">
+                                Advanced mode <IoToggle className='mx-2' />
+                            </button>
+                        </div>
+                    </div>
 
                     <div className="table-responsive" style={{ overflowX: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
                         <table className="table align-middle">
-                            <thead className="table-light">
+                            <thead>
                                 <tr>
-                                    <th>Article No.</th>
-                                    {windowWidth >= 768 && <th>Product/Service</th>}
+                                    <th></th>
+                                    {windowWidth >= 768 && <th>Article No. <FaArrowDown style={{ color: "#87CEEB"}}/></th>}
+                                    <th>Product/Service <FaArrowDown style={{ color: "green"}}/></th>
                                     {windowWidth >= 992 && <th>In Price</th>}
                                     <th>Price</th>
                                     <th className="text-center">...</th>
@@ -179,6 +198,9 @@ const HomePage = () => {
                             <tbody>
                                 {data.map((item, index) => (
                                     <tr key={index}>
+                                        <td>
+                                            {index === data.length - 1 && <img src={`http://localhost:3000/blue_tick.png`} style={{ width: "15px", height: "15px", transform: `rotate(270deg)` }} alt='' />}
+                                        </td>
                                         <td>
                                             <input
                                                 className="form-control form-control-sm rounded-pill"
