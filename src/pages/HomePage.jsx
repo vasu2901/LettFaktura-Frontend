@@ -199,7 +199,7 @@ const HomePage = () => {
                                 {data.map((item, index) => (
                                     <tr key={index}>
                                         <td>
-                                            {index === data.length - 1 && <img src={`http://localhost:3000/blue_tick.png`} style={{ width: "15px", height: "15px", transform: `rotate(270deg)` }} alt='' />}
+                                            {index === data.length - 1 && <img src={`https://lett-faktura-frontend.vercel.app/blue_tick.png`} style={{ width: "15px", height: "15px", transform: `rotate(270deg)` }} alt='' />}
                                         </td>
                                         <td>
                                             <input
