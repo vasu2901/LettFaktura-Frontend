@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaPrint, FaFileInvoiceDollar ,FaArrowDown, FaUser, FaCalculator, FaIdCard, FaFileContract } from 'react-icons/fa';
-import { IoToggle   } from "react-icons/io5";
-import { IoIosSettings, IoIosLogOut  } from "react-icons/io";
+import { FaBars, FaPrint, FaFileInvoiceDollar, FaArrowDown, FaUser, FaCalculator, FaIdCard, FaFileContract } from 'react-icons/fa';
+import { IoToggle } from "react-icons/io5";
+import { IoIosSettings, IoIosLogOut } from "react-icons/io";
 import { TfiFiles } from "react-icons/tfi";
-import { MdLocalOffer, MdOutlineInventory  } from "react-icons/md";
+import { MdLocalOffer, MdOutlineInventory } from "react-icons/md";
 import { TbXboxXFilled } from "react-icons/tb";
 import { BiSolidOffer } from "react-icons/bi";
 import { FaCloudArrowUp } from "react-icons/fa6";
@@ -56,8 +56,9 @@ const HomePage = () => {
         }
     };
     return (
-        <div className="d-flex" style={{ height: '100vh', overflow: 'hidden', backgroundColor: '#ffffff' }}>
-            <div className="flex-grow-1" style={{ position: 'relative', overflowY: 'auto' }}>
+        <div className="flex-grow-1 d-flex flex-column" style={{ position: 'relative', overflow: 'hidden', height: '100vh', background: "white" }}>
+
+            <div className="flex-grow-1" style={{ position: 'relative', }}>
                 <div className="d-flex justify-content-between align-items-center mb-4" style={{
                     padding: '10px 20px',
                     backgroundColor: '#0088cc',
@@ -109,44 +110,44 @@ const HomePage = () => {
                     <h3 className='mx-3'>Menu</h3>
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <a href="/" className="nav-link" style={{ color: 'black' }}><FaFileInvoiceDollar style={{marginRight: "10px",color: "#89CFEF" }}/>Invoices</a>
+                            <a href="/" className="nav-link" style={{ color: 'black' }}><FaFileInvoiceDollar style={{ marginRight: "10px", color: "#89CFEF" }} />Invoices</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#order" className="nav-link" style={{ color: 'black' }}> <FaUser style={{marginRight: "10px",color: "#3DED97" }}/>Customers</a>
+                            <a href="#order" className="nav-link" style={{ color: 'black' }}> <FaUser style={{ marginRight: "10px", color: "#3DED97" }} />Customers</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><IoIosSettings style={{marginRight: "10px",color: "#87CEEB" }}/>My Business</a>
+                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><IoIosSettings style={{ marginRight: "10px", color: "#87CEEB" }} />My Business</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" style={{ color: 'black' }}><FaCalculator  style={{marginRight: "10px",color: "#0080FE" }}/>Invoice Journal</a>
+                            <a href="#about" className="nav-link" style={{ color: 'black' }}><FaCalculator style={{ marginRight: "10px", color: "#0080FE" }} />Invoice Journal</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><MdLocalOffer  style={{marginRight: "10px",color: "#FDB515"}}/>Price List</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><MdLocalOffer style={{ marginRight: "10px", color: "#FDB515" }} />Price List</a>
                         </li>
                         <li className="nav-item">
                             <a href="#customers" className="nav-link" style={{ color: 'black' }}><TfiFiles
-                             style={{marginRight: "8px",color: "#87CEEB" }}/>Multiple Invoicing</a>
+                                style={{ marginRight: "8px", color: "#87CEEB" }} />Multiple Invoicing</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" style={{ color: 'black' }}><TbXboxXFilled style={{marginRight: "10px",color: "red" }}/>Unpaid Invoices</a>
+                            <a href="#about" className="nav-link" style={{ color: 'black' }}><TbXboxXFilled style={{ marginRight: "10px", color: "red" }} />Unpaid Invoices</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><BiSolidOffer style={{marginRight: "10px",color: "#FFD700" }}/>Offer</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><BiSolidOffer style={{ marginRight: "10px", color: "#FFD700" }} />Offer</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><MdOutlineInventory style={{marginRight: "10px",color: "#0080FE" }}/>Inventory Control</a>
+                            <a href="#customers" className="nav-link" style={{ color: 'black' }}><MdOutlineInventory style={{ marginRight: "10px", color: "#0080FE" }} />Inventory Control</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" style={{ color: 'black' }}><FaIdCard style={{marginRight: "10px",color: "#0080FE" }}/>Member Invoicing</a>
+                            <a href="#about" className="nav-link" style={{ color: 'black' }}><FaIdCard style={{ marginRight: "10px", color: "#0080FE" }} />Member Invoicing</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><FaCloudArrowUp style={{marginRight: "10px",color: "#4682B4" }}/>Import/Export</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><FaCloudArrowUp style={{ marginRight: "10px", color: "#4682B4" }} />Import/Export</a>
                         </li>
                         <li className="nav-item">
-                            <a href="/terms" className="nav-link" style={{ color: 'black' }}><FaFileContract  style={{marginRight: "10px",color: "#3DED97" }}/>Terms</a>
+                            <a href="/terms" className="nav-link" style={{ color: 'black' }}><FaFileContract style={{ marginRight: "10px", color: "#3DED97" }} />Terms</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><IoIosLogOut ser style={{marginRight: "10px",color: "#89CFEF" }}/>Log out</a>
+                            <a href="#contact" className="nav-link" style={{ color: 'black' }}><IoIosLogOut ser style={{ marginRight: "10px", color: "#89CFEF" }} />Log out</a>
                         </li>
                     </ul>
                 </div>
@@ -182,64 +183,80 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="table-responsive" style={{ overflowX: 'auto', maxHeight: 'calc(100vh - 200px)' }}>
-                        <table className="table align-middle">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    {windowWidth >= 768 && <th>Article No. <FaArrowDown style={{ color: "#87CEEB"}}/></th>}
-                                    <th>Product/Service <FaArrowDown style={{ color: "green"}}/></th>
-                                    {windowWidth >= 992 && <th>In Price</th>}
-                                    <th>Price</th>
-                                    <th className="text-center">...</th>
-                                    <th className="text-center">Action</th>
+                    <div style={{
+                        height: '60vh',
+                        overflowY: 'auto',
+                        paddingRight: '10px'
+                    }}>    <table className="min-w-full table-auto border-collapse">
+                            <thead className="sticky top-0 bg-white z-10">
+                                <tr className="text-left text-secondary-dark text-[0.95rem] font-semibold border-b">
+                                    <th className="p-3 min-w-[50px]"></th>
+                                    {windowWidth >= 768 && (
+                                        <th className="p-3 min-w-[150px] max-w-[250px]">
+                                            Article No. <FaArrowDown style={{ color: "#87CEEB" }} />
+                                        </th>
+                                    )}
+                                    <th className="p-3 min-w-[300px]">
+                                        Product/Service <FaArrowDown style={{ color: "green" }} />
+                                    </th>
+                                    {windowWidth >= 992 && (
+                                        <th className="p-3 min-w-[150px]">In Price</th>
+                                    )}
+                                    <th className="p-3 min-w-[150px]">Price</th>
+                                    <th className="p-3 min-w-[100px]">...</th>
+                                    <th className="p-3 min-w-[100px]">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {data.map((item, index) => (
-                                    <tr key={index}>
-                                        <td>
-                                            {index === data.length - 1 && <img src={`https://lett-faktura-frontend.vercel.app/blue_tick.png`} style={{ width: "15px", height: "15px", transform: `rotate(270deg)` }} alt='' />}
+                                    <tr className="border-b border-dashed last:border-b-0" key={index}>
+                                        <td className="p-2">
+                                            {index === data.length - 1 && (
+                                                <img
+                                                    src="https://lett-faktura-frontend.vercel.app/blue_tick.png"
+                                                    style={{ width: "15px", height: "15px", transform: `rotate(270deg)` }}
+                                                    alt=""
+                                                />
+                                            )}
                                         </td>
-                                        <td>
+                                        <td className="p-2">
                                             <input
-                                                className="form-control form-control-sm rounded-pill"
+                                                className="form-control form-control-sm rounded-pill w-full"
                                                 readOnly
                                                 value={item.article_no}
                                             />
                                         </td>
                                         {windowWidth >= 768 && (
-                                            <td>
+                                            <td className="p-2">
                                                 <input
-                                                    className="form-control form-control-sm rounded-pill"
+                                                    className="form-control form-control-sm rounded-pill w-full"
                                                     readOnly
                                                     value={item.product_service}
                                                 />
                                             </td>
                                         )}
                                         {windowWidth >= 992 && (
-                                            <td>
+                                            <td className="p-2">
                                                 <input
-                                                    className="form-control form-control-sm rounded-pill"
+                                                    className="form-control form-control-sm rounded-pill w-full"
                                                     readOnly
                                                     value={item.in_price}
                                                 />
                                             </td>
                                         )}
-                                        <td>
+                                        <td className="p-2">
                                             <input
-                                                className="form-control form-control-sm rounded-pill"
+                                                className="form-control form-control-sm rounded-pill w-full"
                                                 readOnly
                                                 value={item.price}
                                             />
                                         </td>
-                                        <td className="text-center">
+                                        <td className="text-center p-2">
                                             <div className="dropdown">
                                                 <button className="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
                                                     ...
                                                 </button>
                                                 <ul className="dropdown-menu">
-                                                    {/* Show missing fields based on screen size */}
                                                     {windowWidth < 768 && (
                                                         <>
                                                             <li><strong>Product:</strong> {item.product_service}</li>
@@ -255,7 +272,7 @@ const HomePage = () => {
                                                 </ul>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td className="p-2">
                                             <Form initialData={item} mode="edit" modalId={`editModal-${item.id}`} />
                                         </td>
                                     </tr>
@@ -263,7 +280,6 @@ const HomePage = () => {
                             </tbody>
                         </table>
                     </div>
-
                 </div>
             </div>
         </div>
